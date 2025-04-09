@@ -5,7 +5,7 @@ public class GestorViviendas {
 
     public void registrarVivienda(Vivienda v) {
         listaViviendas.add(v);
-        System.out.println("✅ Vivienda registrada.");
+        System.out.println("La vivienda fue registrada.");
     }
 
     public void buscarPorMatriculaLineal(int matricula) {
@@ -15,7 +15,7 @@ public class GestorViviendas {
                 return;
             }
         }
-        System.out.println("❌ No se encontró la vivienda.");
+        System.out.println("La vivienda no esta en la lista.");
     }
 
     public void buscarPorApellido(String apellido) {
@@ -25,7 +25,7 @@ public class GestorViviendas {
                 return;
             }
         }
-        System.out.println("❌ No se encontró la vivienda.");
+        System.out.println("No se encontro la vivienda.");
     }
 
     public void ordenarPorBurbuja() {
@@ -36,7 +36,7 @@ public class GestorViviendas {
                 }
             }
         }
-        System.out.println("✅ Lista ordenada por burbuja.");
+        System.out.println("La lista fue ordenada por burbuja.");
     }
 
     public void ordenarPorInsercion() {
@@ -49,11 +49,11 @@ public class GestorViviendas {
             }
             listaViviendas.set(j + 1, key);
         }
-        System.out.println("✅ Lista ordenada por inserción.");
+        System.out.println("La Lista fue ordenada por insercion.");
     }
 
     public void buscarBinaria(int matricula) {
-        ordenarPorInsercion();  // ordenar antes de buscar
+        ordenarPorInsercion();  
         int izquierda = 0, derecha = listaViviendas.size() - 1;
         while (izquierda <= derecha) {
             int medio = (izquierda + derecha) / 2;
@@ -67,11 +67,11 @@ public class GestorViviendas {
                 derecha = medio - 1;
             }
         }
-        System.out.println("❌ No se encontró la matrícula (binaria).");
+        System.out.println("No se encontro la matricula (manera binaria).");
     }
 
     public void listarMatriculas() {
-        System.out.println("📋 Matrículas registradas:");
+        System.out.println("Las matriculas que han sido registradas son:");
         for (Vivienda v : listaViviendas) {
             System.out.println("- Matrícula: " + v.matricula);
         }

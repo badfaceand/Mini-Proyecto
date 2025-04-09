@@ -14,8 +14,8 @@ public class Vivienda {
     }
 
     public void mostrarDatos() {
-        System.out.println("Matrícula: " + matricula);
-        System.out.println("Dirección: " + direccion);
+        System.out.println("Matricula: " + matricula);
+        System.out.println("Direccion: " + direccion);
         System.out.println("Nombre propietario: " + nombrePropietario);
         System.out.println("Apellido propietario: " + apellidoPropietario);
         System.out.println("Barrio: " + barrio);
